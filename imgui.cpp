@@ -11227,7 +11227,7 @@ bool ImGui::BeginCombo(const char* label, const char* preview_value, ImGuiComboF
         return false;
 
     bool hovered, held;
-    bool pressed = ButtonBehavior(frame_bb, id, &hovered, &held);
+    bool pressed = ButtonBehavior(frame_bb, id, &hovered, &held, ImGuiButtonFlags_PressedOnClick);
     bool popup_open = IsPopupOpen(id);
 
     const ImRect value_bb(frame_bb.Min, frame_bb.Max - ImVec2(arrow_size, 0.0f));
